@@ -1,0 +1,20 @@
+﻿@model BooksListViewModel
+
+<h3>Version1.0</h3>
+<h1>@Model.CurrentGenre</h1>
+
+@foreach (var book in Model.Books)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@book.ImageThumbnailUrl" alt="">
+            <div class="caption">
+                <h3 class="pull-right">@book.Price.ToString("c")</h3>
+                <h3>
+                    <a>@book.Title</a>
+                </h3>
+                <p>@book.ShortDescription</p>
+            </div>
+        </div>
+    </div>
+}
